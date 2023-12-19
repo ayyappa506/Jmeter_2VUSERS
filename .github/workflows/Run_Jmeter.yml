@@ -28,9 +28,3 @@ jobs:
         run: |
           cd apache-jmeter-5.4.1/bin
           ./jmeter -n -t ../../Sample_Get_API_Calls_Direct.jmx -l test-results.jtl
-
-      - name: Upload Results
-        uses: actions/upload-artifact@v2
-        with:
-          name: jmeter-results
-          path: test-results.jtl
